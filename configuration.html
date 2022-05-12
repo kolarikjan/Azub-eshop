@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>AZUB</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand navbar-light w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="logo" class="img-fluid">
+                    <h1>AZUB <span>Bike Configurator</span></h1>
+                </a>
+                <div class="collapse navbar-collapse m-auto m-lg-0 justify-content-lg-end" id="head-nav">
+                    <ul class="navbar-nav flex-wrap">
+                        <li class="nav-item">
+                            <div class="currency-switch">
+                                <a href="" class="active">eur</a>
+                                <a href="">usd</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="log-in">
+                                <a href="signup.html">
+                                    <img src="img/login.png" alt="login">
+                                    <span>Log in</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="log-in">
+                                <a href="signup.html">
+                                    <img src="img/signup.png" alt="login">
+                                    <span>Sign in</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 col-xl-3">
+                    <div class="products-menu mt-0">
+                        <ul>
+                            <li>
+                                <a href="" class="active">
+                                    <img src="img/cat9.png" alt="cat">
+                                    <p>
+                                        My configurations
+                                    </p>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="">
+                                    <img src="img/cat10.png" alt="cat">
+                                    <p>
+                                        Change Customer Data
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 col-xl-9">
+                    <div class="ml-lg-3">
+                            <div class="products configurations mt-lg-0">
+                                <h2>My configurations</h2>
+                                <div>
+                                    <div class="configuration-filters">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-9">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-lg-3">
+                                                        <div class="signup--inputbox">
+                                                            <label for="name">
+                                                                Search by No.:
+                                                            </label>
+                                                            <input type="text" placeholder="Configuration No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-lg-3">
+                                                        <div class="signup--inputbox">
+                                                            <label for="name">
+                                                                Search by model:
+                                                            </label>
+                                                            <input type="text" placeholder="Model name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-lg-3">
+                                                        <div class="signup--inputbox">
+                                                            <label for="name">
+                                                                Search by date:
+                                                            </label>
+                                                            <input type="text" placeholder="From" class="input-calendar" onfocus="(this.type='date')" >
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-lg-3">
+                                                        <div class="signup--inputbox">
+                                                            <label class="d-none d-sm-block">
+                                                                &nbsp;
+                                                            </label>
+                                                            <input type="text" placeholder="To" class="input-calendar" onfocus="(this.type='date')" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-3">
+                                                <div class="signup--inputbox">
+                                                    <label class="d-none d-xl-block">
+                                                        &nbsp;
+                                                    </label>
+                                                    <a href="" class="viewFavorites">
+                                                        <img src="img/star.png" alt="star">
+                                                        View favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="configuration-list mt-3">
+                                        <div class="configuration-list--row configuration-list--firstrow">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Model</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>Date</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>ID</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>Price</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="configuration-list--row">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <p>Azub Max</p>
+                                                </div>
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="row">
+                                                        <div class="col-12 col-xl-4">
+                                                            <span>07/04/2022</span>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>0023456</p>
+                                                        </div>
+                                                        <div class="col-12 col-xl-4">
+                                                            <p>4 550 €</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-4 configuration-list--buttons">
+                                                    <a href="">
+                                                        <img src="img/send.png" alt="send">
+                                                        Send
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="img/delete.png" alt="delete">
+                                                        Delete
+                                                    </a>
+                                                    
+                                                    <a href="">
+                                                        <img src="img/add.png" alt="add">
+                                                        Add favorites
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="configuration-pagination">
+                                        <ul class="w-fit">
+                                            <li>
+                                                <a href="">
+                                                    <img src="img/pagination1.png" alt="arrow">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="active">
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    2
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    4
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    5
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="img/pagination2.png" alt="arrow">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
