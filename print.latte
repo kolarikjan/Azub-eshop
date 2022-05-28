@@ -1,0 +1,118 @@
+{block content}
+	{if $lang && $lang != "cs"}
+		{var $lang_name = $lang . "_name"}
+		{var $lang_content = $lang . "_content"}
+		{var $description_lang = $lang . "_description"}
+		{var $short_description_lang = $lang . '_short_desc'}		
+	{else}
+		{var $lang_name = "name"}
+		{var $lang_content = "content"}
+		{var $description_lang = "description"}
+		{var $short_description_lang = 'short_desc'}		
+	{/if}
+
+
+
+			{if $configuration}
+			
+<div class="print-configuration">
+        <div class="print">
+			<table class="print-userTable">
+				<tr>
+					<td style="width: 50%">
+						<p class="print-strong">Customer data:</p>
+						{if $customer}
+							{$customer->name} {$customer->lastname}<br/>
+							{$customer->street} {$customer->cp}<br/>
+							{$customer->city} {$customer->zip}<br/>
+							{$customer->country} <br/>
+							{$customer->email}, {$customer->telephone}
+						{else}
+							Not logged in
+						{/if}
+					</td>
+					<td style="width: 50%">
+						Configuration no: 
+						<p class="print-number">{$configuration->number}</p>
+					</td>
+				</tr>
+			</table>
+
+			<table class="print-productsTable">
+				<thead>
+					<tr>
+						<th class="print-itemMainCol">ITEM</th>
+						<th class="print-priceMainCol">PRICE</th>
+					</tr>
+				</thead>
+					<tbody>
+						{var $total = $configuration->price}
+						<tr class="print-itemRow">
+							<td class="print-itemCol">
+								{if !empty($model->image_extension)}<img style="max-width:100px;" src="{$basePath}/content/config_templates/{$model->id}/{$model->id}.{$model->image_extension}" alt="model">{/if}
+								<p>
+								<span>Model</span>
+								{$model->name}
+								</p>
+							</td>
+							<td class="print-priceCol">+ {$configuration->price} €</td>
+						</tr>			
+						{foreach $products as $product}
+						<tr class="print-itemRow">
+							<td class="print-itemCol">
+								
+									{if !empty($product->product->image_extension)}<img style="max-width:100px;" src="{$basePath}/content/config_products/{$product->product->id}/{$product->product->id}.{$product->product->image_extension}" alt="product" class="img-fluid">{/if}
+									<p>
+									<span>{$product->category->name}</span>
+									{$product->product->name}
+									</p>
+					
+								</td>
+								<td class="print-priceCol">+ {$product->price} €</td>
+								{var $total = $total + $product->price}
+							</tr>		
+						{/foreach}
+					</tbody>
+				</table>
+				
+				<table class="print-note">
+					<tr>
+						<td style="width: 62%;vertical-align: baseline;">
+							<p class="print-strong print-noteH">Note:</p>
+							<p class="print-noteText">{$configuration->note}</p>
+						</td>
+						<td style="width: 38%;vertical-align: baseline;">
+							<div class="table-totalPrice">
+								<p class="table-totalPriceLabel">TOTAL</p>
+								<p class="table-totalPriceAmount">{$total} €</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+				<table class="print-footer">
+					<tr>
+						<td class="print-footerLogo" style="width: 55%;">
+							<img src="{$basePath}/www/web/img/logo-white.png" alt="logo">
+						</td>
+						<td class="print-footerAddress" style="width: 20%;">
+							<p>AZUB BIKE s.r.o</p>
+							<p>Bajovec 2761</p>
+							<p>688 01 Uherský Brod</p>
+							<p>Česká republika</p>
+							<p>www.azub.eu</p>
+						</td>
+						<td class="print-footerContact" style="width: 25%;">
+							<p>+420 774 298 232</p>
+							<p>info@azub.eu</p>
+						</td>
+					</tr>
+				</table>
+        </div>
+</div>
+
+			{else}
+				<div class="content"><div class="container"><p>Configuration not found</p></div></div>
+			{/if}
+
+{/block}
